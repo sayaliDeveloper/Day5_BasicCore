@@ -7,6 +7,7 @@ public class CoreProgram {
 
         flipCoin();
         leapYear();
+        powerOfTwo();
     }
 
     public static void flipCoin() {
@@ -58,4 +59,25 @@ public class CoreProgram {
         else
             System.out.println("Year zero does not exist ");
     }
-    }
+    public static void powerOfTwo(){
+                if (args.length < 1) {
+                    System.out.println("Enter value for N as a command-line argument.");
+                } else {
+                    int n = Integer.parseInt(args[0]);
+
+                        if (n < 0 || n >= 31) {
+                            System.out.println("Invalid input! N should be between 0 and 30.");
+                        } else {
+                            System.out.println("Powers of 2 table:");
+                            System.out.println("Power\tValue");
+
+                            for (int i = 0; i <= n; i++) {
+                                int power = i;
+                                int value = (int) Math.pow(2, i);
+                                System.out.println(power + "\t" + value);
+                            }
+                        }
+                    }
+                }
+            }
+
