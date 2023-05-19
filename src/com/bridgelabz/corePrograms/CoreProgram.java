@@ -13,6 +13,7 @@ public class CoreProgram {
         quotientAndRemainder();
         swapNumber();
         evenOdd();
+        vowelOrConsonant();
     }
 
     public static void flipCoin() {
@@ -162,6 +163,23 @@ public class CoreProgram {
                 System.out.println(number + " is odd.");
             }
         }
+    public static void vowelOrConsonant() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter an alphabet: ");
+        char alpha = sc.next().toLowerCase().charAt(0);
+           if (alpha >= 'a' && alpha <= 'z') {
+                if (alpha == 'a' || alpha == 'e' || alpha == 'i' || alpha == 'o' || alpha == 'u') {
+                    System.out.println(alpha + " is a vowel.");
+                } else {
+                    System.out.println(alpha + " is a consonant.");
+                }
+            } else {
+                System.out.println("Invalid input. Please enter an alphabet.");
+            }
+
+
+        }
     }
+
 
 
