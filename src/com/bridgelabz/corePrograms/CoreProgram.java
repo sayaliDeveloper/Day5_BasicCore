@@ -4,17 +4,17 @@ import java.util.Scanner;
 
 public class CoreProgram {
     public static void main(String[] args) {
-
+        Scanner sc=new Scanner(System.in);
         flipCoin();
         leapYear();
-        powerOfTwo();
+       // powerOfTwo();
+        harmonicNumber();
     }
 
     public static void flipCoin() {
 
-
-                Scanner sc = new Scanner(System.in);
                 System.out.println("Enter how many times you want to flip the coin :");
+                Scanner sc=new Scanner(System.in);
                 int count=sc.nextInt();
                 int headFlip=0;
                 int tailFlip=0;
@@ -59,7 +59,7 @@ public class CoreProgram {
         else
             System.out.println("Year zero does not exist ");
     }
-    public static void powerOfTwo(){
+    /*public static void powerOfTwo(){
                 if (args.length < 1) {
                     System.out.println("Enter value for N as a command-line argument.");
                 } else {
@@ -78,6 +78,25 @@ public class CoreProgram {
                             }
                         }
                     }
-                }
+                }*/
+                     public static void harmonicNumber() {
+                         Scanner sc=new Scanner(System.in);
+                         System.out.print("Enter Value of Number:");
+                         int n = sc.nextInt();
+
+                         if (n <= 0) {
+                             System.out.println(" N should be a positive integer.");
+                         } else {
+                             double harmonic = 0.0;
+
+                             for (int i = 1; i <= n; i++) {
+                                 harmonic += 1.0 / i;
+                             }
+
+                             System.out.println("The " + n + "th Harmonic Value is: " + harmonic);
+                         }
+
+
+                     }
             }
 
