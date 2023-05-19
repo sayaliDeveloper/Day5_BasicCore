@@ -9,6 +9,7 @@ public class CoreProgram {
         leapYear();
        // powerOfTwo();
         harmonicNumber();
+        primeFactor();
     }
 
     public static void flipCoin() {
@@ -98,5 +99,21 @@ public class CoreProgram {
 
 
                      }
-            }
+                     public static void primeFactor(){
+                         Scanner sc = new Scanner(System.in);
+                         System.out.print("Enter a number: ");
+                         int num = sc.nextInt();
+                         System.out.print("Prime factors of " + num + ": ");
+                         for (int i = 2; i * i <= num; i++) {
+                             while (num % i == 0) {
+                                 System.out.print(i + " ");
+                                 num  = num/i;
+                             }
+                         }
+                         if (num > 1) {
+                             System.out.print(num);
+                         }
+
+    }
+}
 
