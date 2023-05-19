@@ -12,6 +12,7 @@ public class CoreProgram {
         primeFactor();
         quotientAndRemainder();
         swapNumber();
+        evenOdd();
     }
 
     public static void flipCoin() {
@@ -151,13 +152,16 @@ public class CoreProgram {
         System.out.println("num1 = " + num1);
         System.out.println("num2 = " + num2);
         }
+    public static void evenOdd() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int number = sc.nextInt();
+        if (number % 2 == 0) {
+                System.out.println(number + " is even.");
+            } else {
+                System.out.println(number + " is odd.");
+            }
+        }
+    }
 
-
-
-
-
-
-
-
-}
 
